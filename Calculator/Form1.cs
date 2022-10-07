@@ -31,6 +31,7 @@ namespace Calculator
             }
             isOperatorClicked = false;
             Button button = (Button)sender;
+            resultBox.Text = resultBox.Text + button.Text;
             if (button.Text == ".")
             {
                 if (!resultBox.Text.Contains("."))
@@ -87,7 +88,8 @@ namespace Calculator
                     
                     resultBox.Text = (resultValue * Double.Parse(resultBox.Text)).ToString();
                     break;
-                case "÷":
+                    
+                case "÷\r\n\r\n":
                     resultBox.Text = (resultValue / Double.Parse(resultBox.Text)).ToString();
                     break;
                 default:
